@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "d2f87301-3652-42c4-b792-911817de4a80",
+		"name": "Utra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5318887"
+	},
+	"item": [
+		{
+			"name": "Create a user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"the endpoint returns the expected status code\", () => {\r",
+							"  // comma separate the valid response codes below\r",
+							"  //201: new user (unique email address)\r",
+							"  //401: email already exists\r",
+							"  const expectedStatusCodes = [201, 422]; \r",
+							"\r",
+							"  pm.expect(pm.response.code).to.be.oneOf(\r",
+							"    expectedStatusCodes,\r",
+							"    `expected response status to be one of ${expectedStatusCodes} but got ${pm.response.code}.`\r",
+							"  );\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 7e5285f35a8ff41e4c4547c87d18a977e24a4cbd89cd2dbf240a2829ea24eb37"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jo Martin\",\r\n    \"gender\": \"male\",\r\n    \"email\": \"jo.martin@dummydata.com\",\r\n    \"status\": \"active\"\r\n}"
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"the endpoint returns the expected status code\", () => {\r",
+							"  // change 200 to the response code you expect\r",
+							"  const expectedStatusCode = 200;\r",
+							"\r",
+							"  pm.response.to.have.status(expectedStatusCode);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 7e5285f35a8ff41e4c4547c87d18a977e24a4cbd89cd2dbf240a2829ea24eb37"
+					}
+				],
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"the endpoint returns the expected status code\", () => {\r",
+							"  // change 200 to the response code you expect\r",
+							"  const expectedStatusCode = 200;\r",
+							"\r",
+							"  pm.response.to.have.status(expectedStatusCode);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 7e5285f35a8ff41e4c4547c87d18a977e24a4cbd89cd2dbf240a2829ea24eb37"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jo Martin\",\r\n    \"email\": \"jo.marti@dummy.com\",\r\n    \"id\": \"9999\",\r\n    \"status\": \"active\"\r\n}"
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users/4599",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"4599"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

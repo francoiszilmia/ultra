@@ -1,0 +1,16 @@
+{"search": {
+            "Username": {"by": "xpath", "value": "//input[contains(@placeholder, 'Username')]"},
+            "Password": {"by": "xpath", "value": "//input[contains(@placeholder, 'Password')]"},
+            "Login": {"by": "xpath", "value": "//input[contains(@name, 'login-button')]"},
+            "add_cart": {"by": "xpath", "value": "(//button[contains(text(), 'Add to cart')])[1]"},
+            "shopping_cart_badge": {"by": "xpath", "value": "//span[@class='shopping_cart_badge']"},
+            "checkout": {"by": "xpath", "value": "//button[@name='checkout']"},
+            "firstName": {"by": "xpath", "value": "//input[contains(@name, 'firstName')]"},
+            "lastName": {"by": "xpath", "value": "//input[contains(@name, 'lastName')]"},
+            "postalCode": {"by": "xpath", "value": "//input[contains(@name, 'postalCode')]"},
+            "continue": {"by": "xpath", "value": "//input[contains(@id, 'continue')]"},
+            "finish": {"by": "xpath", "value": "//button[contains(@id, 'finish')]"},
+            "order": {"by": "xpath", "value": "//h2[contains(text(), 'THANK YOU FOR YOUR ORDER')]"},
+            "pony_express": {"by": "xpath", "value": "//img[@class='pony_express']"}
+            }
+}

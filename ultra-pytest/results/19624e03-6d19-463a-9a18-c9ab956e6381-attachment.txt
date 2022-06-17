@@ -1,0 +1,4 @@
+[32mINFO    [0m test_logon:test_logon.py:67 Checkout button = //span[@class='shopping_cart_badge']
+[32mINFO    [0m test_logon:test_logon.py:100 Retrieved firstname = Jo
+[32mINFO    [0m test_logon:test_logon.py:101 Retrieved lastname = Martin
+[32mINFO    [0m test_logon:test_logon.py:102 Retrieved zipcode = 12345

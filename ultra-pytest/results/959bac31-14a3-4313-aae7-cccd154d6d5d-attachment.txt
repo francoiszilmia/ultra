@@ -1,0 +1,1 @@
+[32mINFO    [0m test_logon:test_logon.py:51 Add to cart button = (//button[contains(text(), 'Add to cart')])[1]

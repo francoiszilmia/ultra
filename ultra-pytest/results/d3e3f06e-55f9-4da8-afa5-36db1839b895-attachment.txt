@@ -1,0 +1,3 @@
+[32mINFO    [0m test_logon:test_logon.py:28 Retrieved username = standard_user
+[32mINFO    [0m test_logon:test_logon.py:29 Retrieved password = secret_sauce
+[32mINFO    [0m test_logon:test_logon.py:44 saucedemo titile = Swag Labs
